@@ -1,9 +1,12 @@
 ﻿@model UserLoginViewModel
+@{
+    ViewData["Title"]= "Login";
+}
 
 <div class="container mt-5">
     <div class="d-flex justify-content-center">
 
-        <form method="post" class="col-10 col-xl-6">
+        <form method="post" class="col-10 col-xl-6" novalidate>
 
             <div asp-validation-summary="ModelOnly"></div>
 
