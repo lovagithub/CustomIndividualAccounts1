@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using WebApp.Models.Dtos;
 
-namespace WebApp.Models.ViewModels
+namespace WebApp.ViewModels
 {
     public class ProductRegistrationViewModel
     {
