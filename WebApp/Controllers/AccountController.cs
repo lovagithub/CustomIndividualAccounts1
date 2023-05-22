@@ -33,7 +33,7 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (await _auth.SignUpAsync(model))
+                if (await _auth.SignUpAsync(model, _auth.Get_identityContext()))
                     return RedirectToAction("SignIn");
 
                 ModelState.AddModelError("", "A user with the same email already exists");

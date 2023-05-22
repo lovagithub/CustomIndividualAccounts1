@@ -24,9 +24,12 @@ public class AuthService
         _roleManager = roleManager;
     }
 
+    public IdentityContext Get_identityContext()
+    {
+        return _identityContext;
+    }
 
-
-    public async Task<bool> SignUpAsync(UserSignUpViewModel model)
+    public async Task<bool> SignUpAsync(UserSignUpViewModel model, IdentityContext _identityContext)
     {
         try
         {
@@ -37,15 +40,15 @@ public class AuthService
                 roleName = "admin";
 
             IdentityUser identityUser = model;
-            await _userManager.CreateAsync(identityUser, model.Password);
+            _=await _userManager.CreateAsync(identityUser, model.Password);
 
-            await _userManager.AddToRoleAsync(identityUser, roleName);
+            _=await _userManager.AddToRoleAsync(identityUser, roleName);
 
             UserProfileEntity userProfileEntity = model;
             userProfileEntity.UserId = identityUser.Id;
 
-            _identityContext.UserProfiles.Add(userProfileEntity);
-            await _identityContext.SaveChangesAsync();
+            object value = _identityContext.UserProfiles.Add(userProfileEntity);
+            _=await _identityContext.SaveChangesAsync();
 
             return true;
         }
