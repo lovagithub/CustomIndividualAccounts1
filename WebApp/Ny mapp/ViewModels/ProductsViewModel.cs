@@ -1,6 +1,2 @@
-﻿namespace WebApp.Models.ViewModels
-{
-    public class ProductsViewModel
-    {
-    }
-}
+﻿namespace WebApp.Models.ViewModels;
+
