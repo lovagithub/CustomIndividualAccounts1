@@ -15,7 +15,8 @@ public class UserService
 
     public async Task<UserProfileEntity> GetUserProfileAsync(string userId)
     {
-        var userProfileEntity = await _identityContext.UserProfiles.Include(x => x.User).FirstOrDefaultAsync(x => x.UserId == userId);
+        var userProfileEntity = await _identityContext.UserProfiles.Include(x => x.User)
+                                                                   .FirstOrDefaultAsync(x => x.UserId == userId);
         return userProfileEntity!;
     }
 }

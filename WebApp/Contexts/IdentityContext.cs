@@ -11,5 +11,10 @@ namespace WebApp.Contexts
         }
 
         public object UserProfiles { get; internal set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
     }
 }
