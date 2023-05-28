@@ -7,11 +7,11 @@ public class UserRegistrationViewModel
 {
     [Display(Name = "First Name")]
     [Required(ErrorMessage = "First name is required.")]
-    public string FirstName { get; set; } = null!;
+    public string FirstName { get; set; } = string.Empty;
 
     [Display(Name = "Last Name")]
     [Required(ErrorMessage = "Last name is required.")]
-    public string LastName { get; set; } = null!;
+    public string LastName { get; set; } = string.Empty;
 
     [Display(Name = "E-mail Address")]
     [Required(ErrorMessage = "E-mail is required.")]

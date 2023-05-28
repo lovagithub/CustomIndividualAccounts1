@@ -8,7 +8,7 @@ namespace WebApp.Models.Identity
 
         [ProtectedPersonalData]
         public string FirstName { get; set; } = null!;
-        
+
         [ProtectedPersonalData]
         public string LastName { get; set; } = null!;
 
